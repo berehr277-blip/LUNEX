@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LUNEX | Diseño y Desarrollo Web</title>
+
+    <meta name="description" content="LUNEX transforma ideas en experiencias digitales mediante diseño y desarrollo web.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fbf7f4;
+            color: #292526;
+        }
+
+        /* MENÚ */
+
+        header {
+            background: #fffaf7;
+            padding: 20px 8%;
+            border-bottom: 1px solid #eadbd5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            letter-spacing: 5px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #292526;
+        }
+
+        nav a:hover {
+            color: #b9796d;
+        }
+
+        /* INICIO */
+
+        .inicio {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 50px 20px;
+
+            background: linear-gradient(
+                135deg,
+                #fbf7f4,
+                #f4e3de,
+                #eee2d7
+            );
+        }
+
+        .inicio h1 {
+            font-family: Georgia, serif;
+            font-size: 80px;
+            letter-spacing: 12px;
+            margin-bottom: 20px;
+        }
+
+        .frase {
+            color: #b9796d;
+            letter-spacing: 4px;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        .inicio p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 21px;
+            line-height: 1.7;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: #292526;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+        }
+
+        .boton:hover {
+            background: #b9796d;
+        }
+
+.redes-contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.redes-contacto a {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: #2d2929;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.redes-contacto a:hover {
+    background: #b8957a;
+    transform: translateY(-3px);
+}
+
+        /* SECCIONES */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .linea {
+            width: 70px;
+            height: 3px;
+            background: #c9aa78;
+            margin: 0 auto 40px;
+        }
+
+        .texto {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* SERVICIOS */
+
+        #servicios {
+            background: white;
+        }
+
+        .servicios {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .servicio {
+            background: #fbf7f4;
+            border: 1px solid #eadbd5;
+            padding: 30px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .servicio:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .servicio h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .servicio p {
+            line-height: 1.6;
+            color: #5f5758;
+        }
+
+        /* LUNEX 360 */
+
+        #metodologia {
+            background: #f3e5df;
+        }
+
+        .pasos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .paso {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .numero {
+            font-family: Georgia, serif;
+            font-size: 35px;
+            color: #b9796d;
+            margin-bottom: 10px;
+        }
+
+        /* TECNOLOGÍAS */
+
+        #tecnologias {
+            background: white;
+            text-align: center;
+        }
+
+        .tecnologias {
+            margin-top: 35px;
+        }
+
+        .tec {
+            display: inline-block;
+            padding: 12px 20px;
+            margin: 7px;
+            border: 1px solid #d9c4bc;
+            border-radius: 30px;
+            background: #fbf7f4;
+        }
+
+        /* CONTACTO */
+
+        #contacto {
+            background: #292526;
+            color: white;
+            text-align: center;
+        }
+
+        #contacto .titulo {
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #181719;
+            color: #ccc;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* CELULAR */
+
+        @media (max-width: 800px) {
+
+            nav ul {
+                display: none;
+            }
+
+            .inicio h1 {
+                font-size: 50px;
+                letter-spacing: 7px;
+            }
+
+            .servicios,
+            .pasos {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo {
+                font-size: 34px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+    <img src="assets/logo-lunex.jpg" alt="Logo de LUNEX">
+</div>
+<style>
+.logo img {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+</style>
+
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#metodologia">LUNEX 360°</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- INICIO -->
+
+    <section class="inicio" id="inicio">
+
+        <div>
+
+            <div class="hero-text">
+    <div class="tagline">INSPIRA • CREA • TRASCIENDE</div>
+
+    <h1>LUNEX</h1>
+
+    <p>Transformamos ideas en experiencias digitales.</p>
+
+    <p>Diseño y desarrollo de sitios web modernos, funcionales y personalizados.</p>
+
+    <a href="#nosotros" class="btn">Conoce LUNEX</a>
+</div>
+    </section>
+
+
+    <!-- NOSOTROS -->
+
+    <section id="nosotros">
+
+        <h2 class="titulo">
+            ¿Quiénes somos?
+        </h2>
+
+        <div class="linea"></div>
+
+        <p class="texto">
+            LUNEX es una empresa dedicada al diseño y desarrollo
+            de sitios web. Creamos soluciones digitales modernas,
+            funcionales y personalizadas.
+
+            <br><br>
+
+            Nuestro enfoque combina creatividad, tecnología y las
+            necesidades reales de cada cliente.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICIOS -->
+
+    <section id="servicios">
+
+        <h2 class="titulo">
+            Nuestros servicios
+        </h2>
+
+        <div class="linea"></div>
+
+        <div class="servicios">
+
+            <div class="servicio">
+                <h3>Desarrollo web</h3>
+                <p>
+                    Sitios empresariales e informativos personalizados.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>UI / UX</h3>
+                <p>
+                    Interfaces atractivas, intuitivas y fáciles de usar.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Diseño responsivo</h3>
+                <p>
+                    Experiencias adaptadas a celular, tablet y computadora.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>E-commerce</h3>
+                <p>
+                    Tiendas virtuales y catálogos digitales.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Sistemas web</h3>
+                <p>
+                    Formularios, reservaciones, usuarios y otras funciones.
+                </p>
+            </div>
+
+            <div class="servicio">
+                <h3>Mantenimiento</h3>
+                <p>
+                    Actualizaciones, correcciones y mejoras.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LUNEX 360 -->
+
+    <section id="metodologia">
+
+        <h2 class="titulo">
+            LUNEX 360°
+        </h2>
+
+        <div class="linea"></div>
+
+        <p class="texto">
+            Una metodología clara convierte una idea en un proyecto.
+        </p>
+
+        <div class="pasos">
+
+            <div class="paso">
+                <div class="numero">01</div>
+                <h3>DESCUBRIR</h3>
+                <p>Conocemos la necesidad del cliente.</p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">02</div>
+                <h3>IDEAR</h3>
+                <p>Convertimos la necesidad en una idea.</p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">03</div>
+                <h3>DISEÑAR</h3>
+                <p>Diseñamos la experiencia.</p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">04</div>
+                <h3>DESARROLLAR</h3>
+                <p>Construimos la solución digital.</p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">05</div>
+                <h3>PROBAR</h3>
+                <p>Comprobamos que todo funcione.</p>
+            </div>
+
+            <div class="paso">
+                <div class="numero">06</div>
+                <h3>TRASCENDER</h3>
+                <p>Buscamos ayudar al negocio a crecer.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- TECNOLOGÍAS -->
+
+    <section id="tecnologias">
+
+        <h2 class="titulo">
+            Tecnologías
+        </h2>
+
+        <div class="linea"></div>
+
+        <p class="texto">
+            Elegimos la tecnología según las necesidades
+            de cada proyecto.
+        </p>
+
+        <div class="tecnologias">
+
+            <span class="tec">HTML</span>
+            <span class="tec">CSS</span>
+            <span class="tec">JavaScript</span>
+            <span class="tec">Python</span>
+            <span class="tec">PHP</span>
+            <span class="tec">Node.js</span>
+            <span class="tec">MySQL</span>
+            <span class="tec">MongoDB</span>
+            <span class="tec">Figma</span>
+            <span class="tec">Git / GitHub</span>
+
+        </div>
+
+    </section>
+
+<!-- COMPROMISOS -->
+<section id="compromisos">
+    <h2 class="titulo">Nuestros compromisos</h2>
+
+    <div class="servicios-grid">
+
+        <div class="servicio">
+            <h3>Accesibilidad</h3>
+            <p>
+                Diseñamos sitios con textos legibles, navegación sencilla,
+                buen contraste y diseños adaptables.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>Seguridad</h3>
+            <p>
+                Consideramos la validación de formularios, protección de la
+                información, actualizaciones y respaldos.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- CONTACTO -->
+
+    <section id="contacto">
+
+        <h2 class="titulo">
+            Hablemos de tu idea
+        </h2>
+
+        <div class="linea"></div>
+
+        <p class="texto">
+            Una buena idea puede comenzar en una conversación.
+            Nosotros la convertimos en una experiencia digital.
+        </p>
+
+        <div class="redes-contacto">
+    <a href="https://www.instagram.com/lunex_528?stkn=MmJrZndubm51Zjlj" target="_blank">
+        📷 Instagram
+    </a>
+
+    <a href="https://www.facebook.com/share/14rPrz2gWRf/" target="_blank">
+        📘 Facebook
+    </a>
+
+    <a href="https://www.tiktok.com/@lunex528" target="_blank">
+        🎵 TikTok
+    </a>
+
+    <a href="https://wa.me/522481955601" target="_blank">
+        💬 WhatsApp: 248 195 5601
+    </a>
+</div>  
+
+<p class="texto">
+    Síguenos en nuestras redes sociales y conoce más sobre LUNEX.
+</p>
+
+    </section>
+
+<!-- PROPUESTA DE VALOR -->
+<section id="valor">
+
+    <h2 class="titulo">
+        Nuestra propuesta de valor
+    </h2>
+
+    <div class="linea"></div>
+
+    <div class="servicios-grid">
+
+        <div class="servicio">
+            <h3>Personalización</h3>
+            <p>
+                Creamos soluciones adaptadas a las necesidades de cada cliente.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>Diseño</h3>
+            <p>
+                Diseñamos sitios atractivos, modernos y fáciles de usar.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>Funcionalidad</h3>
+            <p>
+                Desarrollamos herramientas útiles que cumplen su propósito.
+            </p>
+        </div>
+
+        <div class="servicio">
+            <h3>Acompañamiento</h3>
+            <p>
+                Acompañamos al cliente durante el desarrollo y mantenimiento.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- PIE -->
+
+    <footer>
+
+        <p>
+            LUNEX • INSPIRA • CREA • TRASCIENDE
+        </p>
+
+        <p>
+            © 2026 LUNEX
+        </p>
+
+    </footer>
+
+</body>
+</html>
